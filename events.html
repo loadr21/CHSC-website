@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events - Colony High Chess Club</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              colony: {
+                green: '#2e7d32',
+                white: '#ffffff',
+                black: '#212121',
+                dgreen: '#2f5d2e',
+              }
+            }
+          }
+        }
+      }
+    </script>
+</head>
+<body class="bg-colony-white text-colony-black">
+  <!-- Navigation -->
+  <nav class="bg-colony-green text-colony-white shadow-lg sticky top-0 z-50">
+    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+      <div class="flex items-center space-x-2">
+        <i data-feather="chess" class="w-8 h-8"></i>
+        <a href="index.html" class="text-xl font-bold">Colony Chess Club</a>
+      </div>
+      <div class="hidden md:flex space-x-6">
+        <a href="index.html" class="hover:text-colony-black transition">Home</a>
+        <a href="about.html" class="hover:text-colony-black transition">About</a>
+        <a href="events.html" class="font-bold hover:text-colony-black transition">Events</a>
+        <a href="members.html" class="hover:text-colony-black transition">Members</a>
+        <a href="join-team.html" class="hover:text-colony-black transition">Join</a>
+        <a href="contact.html" class="hover:text-colony-black transition">Contact</a>
+        <a href="donate.html" class="hover:text-colony-black transition">Donate</a>
+      </div>
+      <button class="md:hidden focus:outline-none" id="menu-toggle">
+        <i data-feather="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+    <!-- Mobile menu -->
+    <div class="md:hidden hidden bg-colony-green px-4 py-2" id="mobile-menu">
+      <a href="index.html" class="block py-2 hover:text-colony-black">Home</a>
+      <a href="about.html" class="block py-2 hover:text-colony-black">About</a>
+      <a href="events.html" class="block py-2 font-bold  hover:text-colony-black">Events</a>
+      <a href="members.html" class="block py-2 hover:text-colony-black">Members</a>
+      <a href="join-team.html" class="block py-2 hover:text-colony-black">Join</a>
+      <a href="contact.html" class="block py-2 hover:text-colony-black">Contact</a>
+      <a href="donate.html" class="block py-2 hover:text-colony-black">Donate</a>
+</div>
+  </nav>
+
+  <!-- Events Hero -->
+  <section class="bg-colony-white bg-opacity-90 text-colony-black py-20">
+    <div class="container mx-auto px-4 text-center">
+      <h1 class="text-4xl md:text-6xl font-bold mb-6">Upcoming Events</h1>
+      <p class="text-xl max-w-2xl mx-auto">Check out tournaments, workshops, and special events</p>
+    </div>
+  </section>
+
+  <!-- Main Events Section -->
+  <section class="py-16">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-colony-green mb-4">2025-26 Tournament Schedule</h2>
+        <p class="max-w-2xl mx-auto">Competitive events are open to all members.</p>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="bg-colony-green rounded-xl p-6 shadow-lg">
+          <div class="flex items-center mb-4">
+            <div class="bg-colony-white text-colony-green rounded-lg p-2 mr-4">
+              <span class="text-xl font-bold block">15</span>
+              <span class="text-sm block">Nov</span>
+            </div>
+            <div>
+              <h3 class="font-bold text-xl text-colony-white">1st Annual Pawnkin Pie Classic</h3>
+              <p class="text-colony-white">9:00 AM - 4:00 PM</p>
+            </div>
+          </div>
+          <p class="text-colony-white">This event is an fundraiser Tournament for the Colony HS Chess Club, also in association with the Palmer Chess Club.</p>
+          </p class= "text-colony-green"> . </p>
+          <a href="https://chessnut.club/e/1st-annual-pawnkin-pie-classic" target="_blank" class="text-colony-dgreen text-colony-wg bg-colony-white hover:bg-opacity-90 font-bold py-2 px-4 rounded-full text-sm transition inline-block">
+            View Page
+          </a>
+        </div>
+        
+        <!-- Event 2 -->
+        <div class="bg-colony-green bg-opacity rounded-xl p-6 shadow-lg">
+          <div class="flex items-center mb-4">
+            <div class="bg-colony-white text-colony-green rounded-lg p-2 mr-4">
+              <span class="text-xl font-bold block">11</span>
+              <span class="text-sm block">DEC</span>
+            </div>
+            <div>
+              <h3 class="font-bold text-xl text-colony-white">USCF k12 2025 Championships</h3>
+              <p class="text-colony-white">Dec 11 - 14</p>
+            </div>
+          </div>
+          <p class="mb-4 text-colony-white">The 2025 National K-12 Grade Chess Championships, hosted by the U.S. Chess Federation, is a premier scholastic chess event where students from Kindergarten to 12th grade compete for national titles.</p>
+          <button class="text-colony-dgreen bg-colony-white hover:bg-opacity-90 font-bold py-2 px-4 rounded-full text-sm transition" onclick=" window.open('https://new.uschess.org/k12-2025-championships','_blank')">
+            Learn More
+          </a>
+        </div>
+        <!-- Event 3 -->
+        <div class="bg-colony-green rounded-xl p-6 shadow-lg">
+          <div class="flex items-center mb-4">
+            <div class="bg-colony-white text-colony-green rounded-lg p-2 mr-4">
+              <span class="text-xl font-bold block">10</span>
+              <span class="text-sm block">Apr</span>
+            </div>
+            <div>
+              <h3 class="font-bold text-xl text-colony-white">Mat-Su High School Tournament</h3>
+              <p class="text-colony-white ">8:00 AM - 2:30 PM</p>
+            </div>
+          </div>
+          <p class="mb-4 text-colony-white">The Matanuska Susitna School Borough High School Chess Tournament.</p>
+          <button class="text-colony-green bg-colony-white hover:bg-opacity-90 font-bold py-2 px-4 rounded-full text-sm transition" onclick=" window.open('https://www.matsuk12.us/athletics-activities/msbsd-chess','_blank')">
+            Learn More
+          </button>
+        </div>
+</div>
+
+      <div class="mt-16">
+        <h2 class="text-3xl font-bold text-center mb-12 text-colony-green">Weekly Activities</h2>
+        <div class="bg-colony-green bg-opacity-10 p-8 rounded-xl">
+          <div class="flex justify-center">
+            <div class="text-center">
+              <h3 class="text-xl font-bold mb-4 text-colony-green">Club Meetings</h3>
+              <p class="mb-2"><strong>When:</strong> Every Wednesday and Thursday, 2:30-4:30 PM</p>
+              <p class="mb-2"><strong>Where:</strong> Room 1065</p>
+              <p>Casual play, strategy discussions, and lessons.</p>
+            </div>
+          </div>
+</div>
+      </div>
+    </div>
+    <section class="flex justify-center items-center py-8 bg-colony-white bg-opacity-90">
+  <iframe 
+    src="https://calendar.google.com/calendar/embed?src=241b718d45f5259fe3b7a5b2a9137ebf260ab71ea3a935d7611aa073e925a86b%40group.calendar.google.com&ctz=America%2FAnchorage" 
+    style="border: 0" 
+    width="800" 
+    height="600" 
+    frameborder="0" 
+    scrolling="no"
+    class="rounded-lg shadow-lg">
+  </iframe>
+</section>
+
+
+  <!-- Past Events Gallery -->
+  <section class="py-16 bg-colony-green text-colony-white">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold mb-12">Past Events</h2>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      <h2 class="font-bold text-colony-white text-center font-bold"> 2025 Matanuska Susitna School Borough High School Chess Tournament
+      </div>
+<h2 class="font-bold text-colony-white text-center font-bold"> 1st Annual Pawnkin Pie Classic
+      </div>
+
+    </div>
+  </section>
+ <!-- Footer -->
+  <footer class="bg-colony-black text-colony-white py-8">
+    <div class="container mx-auto px-4">
+      <div class="grid md:grid-cols-4 gap-8">
+        <div>
+          <h3 class="text-xl font-bold mb-4 text-colony-green">Colony Chess Club</h3>
+          <p class="mb-4">Developing strategic minds one move at a time.</p>
+          <div class="flex space-x-4">
+            <a href="https://www.youtube.com/@ColonyHighSchoolChess" class="hover:text-colony-green transition">
+              <i data-feather="youtube" class="w-5 h-5"></i>
+            </a>
+            <a href="https://www.instagram.com/colonyhighschoolchess/" class="hover:text-colony-green transition">
+              <i data-feather="instagram" class="w-5 h-5"></i>
+            </a>
+          </div>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold mb-4">Quick Links</h3>
+          <ul class="space-y-2">
+            <li><a href="index.html" class="hover:text-colony-green transition">Home</a></li>
+            <li><a href="about.html" class="hover:text-colony-green transition">About</a></li>
+            <li><a href="events.html" class="hover:text-colony-green transition">Events</a></li>
+            <li><a href="members.html" class="hover:text-colony-green transition">Members</a></li>
+            <li><a href="join-team.html" class="hover:text-colony-green transition">Join</a></li>
+            <li><a href="contact.html" class="hover:text-colony-green transition">Contact</a></li>
+            <li><a href="donate.html" class="hover:text-colony-green transition">Donate</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold mb-4">Resources</h3>
+          <ul class="space-y-2">
+            <li><a href="https://new.uschess.org/sites/default/files/media/documents/us-chess-rule-book-online-only-edition-chapters-1-2-10-11-9-1-20.pdf" target="_blank" class="hover:text-colony-green transition">Chess Rules</a></li>
+            <li><a href="https://www.youtube.com/@ColonyHighSchoolChess" target="_blank" class="hover:text-colony-green transition">Strategy Guides</a></li>
+            <li><a href="events.html" class="hover:text-colony-green transition">Tournament Info</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold mb-4">Contact</h3>
+          <ul class="space-y-2">
+            <li class="flex items-center">
+              <i data-feather="mail" class="w-4 h-4 mr-2"></i>
+              colonyhighschoolchess@gmail.com
+            </li>
+            <li class="flex items-center">
+              <i data-feather="map-pin" class="w-4 h-4 mr-2"></i>
+              Room 1065, Colony High School
+            </li>
+            <li class="flex items-center">
+              <i data-feather="clock" class="w-4 h-4 mr-2"></i>
+              Wednesdays and Thursdays 2:30-4:30 PM
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-colony-green border-opacity-20 mt-8 pt-6 text-center text-sm">
+        <p>© 2025 Colony High School Chess Club. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+  
+  <script>
+    // Mobile menu toggle
+    document.getElementById('menu-toggle').addEventListener('click', function() {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('hidden');
+    });
+    
+    // Initialize feather icons
+    feather.replace();
+    
+    // Animation for chess pieces
+    document.addEventListener('DOMContentLoaded', function() {
+      const chessPieces = document.querySelectorAll('.move-up');
+      chessPieces.forEach((piece, index) => {
+        piece.style.animationDelay = `${index * 0.2}s`;
+      });
+    });
+  </script>
+</body>
+</html>

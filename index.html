@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colony High Chess Club</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              colony: {
+                green: '#2e7d32',
+                white: '#ffffff',
+                black: '#212121',
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;500&display=swap');
+      
+      body {
+        font-family: 'Roboto', sans-serif;
+      }
+      
+      h1, h2, h3 {
+        font-family: 'Playfair Display', serif;
+      }
+      
+      .chess-board {
+        background-image: url('http://static.photos/black/640x360/42');
+        background-size: cover;
+        background-position: center;
+      }
+      
+      .move-up {
+        animation: moveUp 1s ease-in-out infinite alternate;
+      }
+      
+      @keyframes moveUp {
+        0% { transform: translateY(0); }
+        100% { transform: translateY(-10px); }
+      }
+    </style>
+</head>
+<body class="bg-colony-white text-colony-black">
+  <!-- Navigation -->
+  <nav class="bg-colony-green text-colony-white shadow-lg sticky top-0 z-50">
+<div class="container mx-auto px-4 py-3 flex justify-between items-center">
+      <div class="flex items-center space-x-2">
+        <i data-feather="chess" class="w-8 h-8"></i>
+        <span class="text-xl font-bold">Colony Chess Club</span>
+      </div>
+      <div class="hidden md:flex space-x-6">
+        <a href="index.html" class="font-bold hover:text-colony-black transition">Home</a>
+        <a href="about.html" class="hover:text-colony-black transition">About</a>
+        <a href="events.html" class="hover:text-colony-black transition">Events</a>
+        <a href="members.html" class="hover:text-colony-black transition">Members</a>
+        <a href="join-team.html" class="hover:text-colony-black transition">Join</a>
+        <a href="contact.html" class="hover:text-colony-black transition">Contact</a>
+        <a href="donate.html" class="hover:text-colony-black transition">Donate</a>
+      </div>
+      <button class="md:hidden focus:outline-none" id="menu-toggle">
+        <i data-feather="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+    <!-- Mobile menu -->
+    <div class="md:hidden hidden bg-colony-green px-4 py-2" id="mobile-menu">
+      <a href="index.html" class="block py-2 font-bold hover:text-colony-black">Home</a>
+      <a href="about.html" class="block py-2 hover:text-colony-black">About</a>
+      <a href="events.html" class="block py-2 hover:text-colony-black">Events</a>
+      <a href="members.html" class="block py-2 hover:text-colony-black">Members</a>
+      <a href="join-team.html" class="block py-2 hover:text-colony-black">Join</a>
+      <a href="contact.html" class="block py-2 hover:text-colony-black">Contact</a>
+      <a href="donate.html" class="block py-2 hover:text-colony-black">Donate</a>
+</div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="chess-board relative overflow-hidden">
+    <div class="absolute inset-0 bg-colony-black bg-opacity-50"></div>
+    <div class="container mx-auto px-4 py-32 relative z-10 text-center">
+      <h1 class="text-4xl md:text-6xl font-bold text-colony-white mb-6">Master Every Move</h1>
+      <p class="text-xl md:text-2xl text-colony-white mb-8 max-w-2xl mx-auto">Join the Colony High Chess Club and sharpen your mind with strategy, competition, and friendship.</p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="join-team.html" class="inline-block">
+        <button class="bg-colony-green hover:bg-opacity-90 text-colony-white font-bold py-3 px-8 rounded-full shadow-lg transition transform hover:scale-105"> 
+          <class="hover:text-colony-black transition">
+          Join Now
+        </button>
+        <a href="about.html" class="inline-block">
+        <button class="bg-colony-white hover:bg-opacity-90 text-colony-green font-bold py-3 px-8 rounded-full shadow-lg transition transform hover:scale-105">
+          Learn More
+        </button>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="py-16 bg-colony-white">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-12 text-colony-green">Why Join Our Club?</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-colony-white p-6 rounded-xl shadow-md border border-colony-green border-opacity-20 text-center move-up">
+          <i data-feather="award" class="w-12 h-12 mx-auto mb-4 text-colony-green"></i>
+          <h3 class="text-xl font-bold mb-3">Tournaments</h3>
+          <p class="text-colony-black opacity-80">Compete in local and state chess tournaments with our team.</p>
+        </div>
+        <div class="bg-colony-white p-6 rounded-xl shadow-md border border-colony-green border-opacity-20 text-center move-up">
+          <i data-feather="users" class="w-12 h-12 mx-auto mb-4 text-colony-green"></i>
+          <h3 class="text-xl font-bold mb-3">Community</h3>
+          <p class="text-colony-black opacity-80">Join a supportive community of chess enthusiasts at all skill levels.</p>
+        </div>
+        <div class="bg-colony-white p-6 rounded-xl shadow-md border border-colony-green border-opacity-20 text-center move-up">
+          <i data-feather="book-open" class="w-12 h-12 mx-auto mb-4 text-colony-green"></i>
+          <h3 class="text-xl font-bold mb-3">Lessons</h3>
+          <p class="text-colony-black opacity-80">Learn from experienced players and improve your strategic thinking.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Upcoming Events -->
+  <section class="py-16 bg-colony-green text-colony-white">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-12">Upcoming Events</h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+         <!-- Event 1 -->
+        <div class="bg-colony-black bg-opacity-40 rounded-xl p-6 shadow-lg">
+          <div class="flex items-center mb-4">
+            <div class="bg-colony-white text-colony-green rounded-lg p-2 mr-4">
+              <span class="text-xl font-bold block">15</span>
+              <span class="text-sm block">Nov</span>
+            </div>
+            <div>
+              <h3 class="font-bold text-xl">1st Annual Pawnkin Pie Classic</h3>
+              <p class="text-colony-white opacity-80">9:00 AM - 4:00 PM</p>
+            </div>
+          </div>
+          <p class="mb-4 text-colony-white">This event is an fundraiser Tournament for the Colony HS Chess Club, also in association with the Palmer Chess Club.</p>
+          <a href="https://chessnut.club/e/1st-annual-pawnkin-pie-classic" target="_blank" class="text-colony-green bg-colony-white hover:bg-opacity-90 font-bold py-2 px-4 rounded-full text-sm transition inline-block">
+            View Page
+          </a>
+        </div>
+        
+        <!-- Event 2 -->
+        <div class="bg-colony-black bg-opacity-40 rounded-xl p-6 shadow-lg">
+          <div class="flex items-center mb-4">
+            <div class="bg-colony-white text-colony-green rounded-lg p-2 mr-4">
+              <span class="text-xl font-bold block">11</span>
+              <span class="text-sm block">DEC</span>
+            </div>
+            <div>
+              <h3 class="font-bold text-xl">USCF k12 2025 Championships</h3>
+              <p class="text-colony-white opacity-80">Dec 11 - 14</p>
+            </div>
+          </div>
+          <p class="mb-4 text-colony-white">The 2025 National K-12 Grade Chess Championships, hosted by the U.S. Chess Federation, is a premier scholastic chess event where students from Kindergarten to 12th grade compete for national titles.</p>
+          <button class="text-colony-green bg-colony-white hover:bg-opacity-90 font-bold py-2 px-4 rounded-full text-sm transition" onclick=" window.open('https://new.uschess.org/k12-2025-championships','_blank')">
+            Learn More
+          </a>
+        </div>
+        <!-- Event 3 -->
+        <div class="bg-colony-black bg-opacity-40 rounded-xl p-6 shadow-lg">
+          <div class="flex items-center mb-4">
+            <div class="bg-colony-white text-colony-green rounded-lg p-2 mr-4">
+              <span class="text-xl font-bold block">10</span>
+              <span class="text-sm block">Apr</span>
+            </div>
+            <div>
+              <h3 class="font-bold text-xl">Mat-Su High School Tournament</h3>
+              <p class="text-colony-white opacity-80">8:00 AM - 2:30 PM</p>
+            </div>
+          </div>
+          <p class="mb-4 text-colony-white">The Matanuska Susitna School Borough High School Chess Tournament.</p>
+          <button class="text-colony-green bg-colony-white hover:bg-opacity-90 font-bold py-2 px-4 rounded-full text-sm transition" onclick=" window.open('https://www.matsuk12.us/athletics-activities/msbsd-chess','_blank')">
+            Learn More
+          </button>
+        </div>
+</div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="py-16 bg-colony-white">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-12 text-colony-green">What Our Members Say</h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="bg-colony-white p-6 rounded-xl shadow-md border border-colony-green border-opacity-20">
+          <div class="flex items-center mb-4">
+            <img src="IMG_coach2.jpg" alt="Student" class="w-12 h-12 rounded-full mr-4">
+            <div>
+              <h4 class="font-bold">Aiden Moffat</h4>
+              <p class="text-sm text-colony-black opacity-60">Club President</p>
+            </div>
+          </div>
+          <p class="text-colony-black">"The chess club has helped me to get to the level I am at."</p>
+          <div class="flex mt-3">
+            <i data-feather="star" class="w-4 h-4 text-yellow-500 fill-current"></i>
+            <i data-feather="star" class="w-4 h-4 text-yellow-500 fill-current"></i>
+            <i data-feather="star" class="w-4 h-4 text-yellow-500 fill-current"></i>
+            <i data-feather="star" class="w-4 h-4 text-yellow-500 fill-current"></i>
+            <i data-feather="star" class="w-4 h-4 text-yellow-500 fill-current"></i>
+          </div>
+        </div>
+        <div class="bg-colony-white p-6 rounded-xl shadow-md border border-colony-green border-opacity-20">
+          <div class="flex items-center mb-4">
+            <img src="IMG_member4.jpg" alt="Student" class="w-12 h-12 rounded-full mr-4">
+            <div>
+              <h4 class="font-bold">Jariah</h4>
+              <p class="text-sm text-colony-black opacity-60">Sophomore Member</p>
+            </div>
+          </div>
+          <p class="text-colony-black">"I joined as a complete beginner, and the supportive environment helped me improve rapidly. Now I can't wait for club meetings!"</p>
+          <div class="flex mt-3">
+            <i data-feather="star" class="w-4 h-4 text-yellow-500 fill-current"></i>
+            <i data-feather="star" class="w-4 h-4 text-yellow-500 fill-current"></i>
+            <i data-feather="star" class="w-4 h-4 text-yellow-500 fill-current"></i>
+            <i data-feather="star" class="w-4 h-4 text-yellow-500 fill-current"></i>
+            <i data-feather="star" class="w-4 h-4 text-yellow-500 fill-current"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-16 bg-colony-green text-colony-white">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold mb-6">Ready to Make Your Move?</h2>
+      <p class="text-xl mb-8 max-w-2xl mx-auto text-colony-white">Join the Colony High Chess Club today and start your journey to becoming a chess master.</p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="join-team.html" class="hover:text-colony-black transition">
+        <button class="bg-colony-white hover:bg-opacity-90 text-colony-green font-bold py-3 px-8 rounded-full shadow-lg transition transform hover:scale-105 justify-center" >
+          Sign Up Now
+        </button>
+         </a>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-colony-black text-colony-white py-8">
+    <div class="container mx-auto px-4">
+      <div class="grid md:grid-cols-4 gap-8">
+        <div>
+          <h3 class="text-xl font-bold mb-4 text-colony-green">Colony Chess Club</h3>
+          <p class="mb-4">Developing strategic minds one move at a time.</p>
+          <div class="flex space-x-4">
+            <a href="https://www.youtube.com/@ColonyHighSchoolChess" class="hover:text-colony-green transition">
+              <i data-feather="youtube" class="w-5 h-5"></i>
+            </a>
+            <a href="https://www.instagram.com/colonyhighschoolchess/" class="hover:text-colony-green transition">
+              <i data-feather="instagram" class="w-5 h-5"></i>
+            </a>
+          </div>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold mb-4">Quick Links</h3>
+          <ul class="space-y-2">
+            <li><a href="index.html" class="hover:text-colony-green transition">Home</a></li>
+            <li><a href="about.html" class="hover:text-colony-green transition">About</a></li>
+            <li><a href="events.html" class="hover:text-colony-green transition">Events</a></li>
+            <li><a href="members.html" class="hover:text-colony-green transition">Members</a></li>
+            <li><a href="join-team.html" class="hover:text-colony-green transition">Join</a></li>
+            <li><a href="contact.html" class="hover:text-colony-green transition">Contact</a></li>
+            <li><a href="donate.html" class="hover:text-colony-green transition">Donate</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold mb-4">Resources</h3>
+          <ul class="space-y-2">
+            <li><a href="https://new.uschess.org/sites/default/files/media/documents/us-chess-rule-book-online-only-edition-chapters-1-2-10-11-9-1-20.pdf" target="_blank" class="hover:text-colony-green transition">Chess Rules</a></li>
+            <li><a href="https://www.youtube.com/@ColonyHighSchoolChess" target="_blank" class="hover:text-colony-green transition">Strategy Guides</a></li>
+            <li><a href="events.html" class="hover:text-colony-green transition">Tournament Info</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold mb-4">Contact</h3>
+          <ul class="space-y-2">
+            <li class="flex items-center">
+              <i data-feather="mail" class="w-4 h-4 mr-2"></i>
+              colonyhighschoolchess@gmail.com
+            </li>
+            <li class="flex items-center">
+              <i data-feather="map-pin" class="w-4 h-4 mr-2"></i>
+              Room 1065, Colony High School
+            </li>
+            <li class="flex items-center">
+              <i data-feather="clock" class="w-4 h-4 mr-2"></i>
+              Wednesdays and Thursdays 2:30-4:30 PM
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-colony-green border-opacity-20 mt-8 pt-6 text-center text-sm">
+        <p>© 2025 Colony High School Chess Club. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    document.getElementById('menu-toggle').addEventListener('click', function() {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('hidden');
+    });
+    
+    // Initialize feather icons
+    feather.replace();
+    
+    // Animation for chess pieces
+    document.addEventListener('DOMContentLoaded', function() {
+      const chessPieces = document.querySelectorAll('.move-up');
+      chessPieces.forEach((piece, index) => {
+        piece.style.animationDelay = `${index * 0.2}s`;
+      });
+    });
+  </script>
+</body>
+</html>
